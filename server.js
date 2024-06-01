@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import Thread from "./models/Thread.js";
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 // express JSONの使用を宣言
 app.use(express.json());
@@ -14,11 +14,11 @@ app.use(express.static("public"));
 
 // dotenv 部分
 dotenv.config();
-const connectionString = process.env.MONGODB_URL;
+const dbUri = process.env.MONGODB_URI;
 
 // mongoose データベースと接続部分
 mongoose
-.connect(connectionString)
+.connectconnect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log('データベースに接続成功'))
 .catch((err) => console.log('エラーが発生しました:', err));
 
@@ -43,4 +43,4 @@ app.post("/api/v1/thread", async (req, res) => {
 });
 
 // サーバーが起動
-app.listen(process.env.PORT || 3000, console.log("サーバーが起動しました"));
+app.listen(port, () => {console.log("サーバー ${port} が起動しました")});
