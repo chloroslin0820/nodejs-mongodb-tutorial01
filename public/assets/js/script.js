@@ -64,6 +64,9 @@ formDOM.addEventListener("submit", async (e) => {
 
 buttonDOM.addEventListener('click', () => {
     if(inputTitle && inputContent) {
-        buttonDOM.classList.toggle('active');
-    } 
+        buttonDOM.classList.add('active');
+    }
+    setTimeout(() => {
+        buttonDOM.classList.remove('active');
+    }, 600);
 });
