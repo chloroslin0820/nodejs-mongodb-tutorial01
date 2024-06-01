@@ -14,11 +14,7 @@ app.use(express.static("public"));
 
 // dotenv 部分
 dotenv.config();
-const username = encodeURIComponent(process.env.MONGODB_USERNAME);
-const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
-const cluster = process.env.MONGODB_CLUSTER;
-const database = process.env.MONGODB_DATABASE;
-const connectionString = `mongodb+srv://${username}:${password}@${cluster}/threads?retryWrites=true&w=majority&appName=${database}`;
+const connectionString = process.env.MONGODB_URL;
 
 // mongoose データベースと接続部分
 mongoose
