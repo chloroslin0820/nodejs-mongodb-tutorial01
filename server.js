@@ -47,4 +47,4 @@ app.post("/api/v1/thread", async (req, res) => {
 });
 
 // サーバーが起動
-app.listen(PORT, console.log("サーバーが起動しました"));
+app.listen(process.env.PORT || 3000, console.log("サーバーが起動しました"));
