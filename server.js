@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 // dotenv 部分
 dotenv.config();
-const dbUri = process.env.MONGODB_URL;
+const dbUri = process.env.HEROKUURL;
 
 // mongoose データベースと接続部分
 mongoose
@@ -44,5 +44,3 @@ app.post("/api/v1/thread", async (req, res) => {
 
 // サーバーが起動
 app.listen(process.env.PORT || PORT, console.log("サーバーが起動しました", process.env.PORT));
-
-process.env.HEROKUURL;
