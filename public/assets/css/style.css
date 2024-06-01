@@ -109,6 +109,11 @@ body {
   background: green;
   color: aliceblue;
   border: 1px solid lightgreen;
+  transition: 0.3s ease-in-out;
+}
+.form-section button.active {
+  transform: scale(1.05);
+  box-shadow: 2px 2px gold;
 }
 @media (max-width: 600px) {
   .form-section {

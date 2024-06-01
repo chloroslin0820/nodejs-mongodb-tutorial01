@@ -2,6 +2,7 @@ const threadSectionDOM = document.querySelector(".thread-section");
 const inputTitleDOM = document.getElementById("input-title");
 const inputContentDOM = document.getElementById("input-content");
 const formDOM = document.querySelector(".form-section");
+const buttonDOM = document.querySelector("button");
 
 let inputTitle = "";
 let inputContent = "";
@@ -59,4 +60,10 @@ formDOM.addEventListener("submit", async (e) => {
             console.log(err);
         }
     }
+});
+
+buttonDOM.addEventListener('click', () => {
+    if(inputTitle && inputContent) {
+        buttonDOM.classList.toggle('active');
+    } 
 });
