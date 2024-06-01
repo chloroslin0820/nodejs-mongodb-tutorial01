@@ -14,8 +14,7 @@ app.use(express.static("public"));
 
 // dotenv 部分
 dotenv.config();
-// const dbUri = process.env.MONGODB_URI;
-const dbUri = "mongodb+srv://chloroslin:12345120maths@trial531.tijmifl.mongodb.net/threads?retryWrites=true&w=majority&appName=trial531";
+const dbUri = process.env.MONGODB_URI;
 
 // mongoose データベースと接続部分
 mongoose
