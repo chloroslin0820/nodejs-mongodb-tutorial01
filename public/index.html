@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NodeとMongoDBでブログ</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/favicon.svg" sizes="any">
+</head>
+
+<body>
+  <div class="board-section">
+    <div class="header-section">
+      <h2>NodejsとMongoDBで掲示板</h2>
+    </div>
+    <!-- この中に挿入していく -->
+    <div class="thread-section">
+      <!-- <div class="single-thread">
+        <h3>タイトル</h3>
+        <p>内容</p>
+      </div>
+      <div class="single-thread">
+        <h3>タイトル</h3>
+        <p>内容</p>
+      </div>
+      <div class="single-thread">
+        <h3>タイトル</h3>
+        <p>内容</p>
+      </div> -->
+    </div>
+    <form class="form-section">
+      <p>タイトル</p>
+      <input type="text" id="input-title" />
+      <p>内容</p>
+      <textarea id="input-content" rows="6" cols="33"></textarea>
+      <br />
+      <button id="submit-button" type="submit">送信</button>
+    </form>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
